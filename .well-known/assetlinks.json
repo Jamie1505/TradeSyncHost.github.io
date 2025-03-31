@@ -1,0 +1,10 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.jamie1505.TradeSync",
+      "sha256_cert_fingerprints": [
+        "5C:8B:88:A4:66:A5:0E:22:EC:34:B3:22:92:BC:83:9A:67:21:9B:81:7C:3B:06:37:0E:76:E4:5F:9F:8A:09:B6"
+      ]
+    }
+  }]

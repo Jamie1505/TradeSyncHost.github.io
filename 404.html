@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <script>
+    // Extract the path from the URL
+    var path = window.location.pathname;
+    
+    // Check if the app is installed and redirect to it
+    var timeout;
+    
+    function tryApp() {
+      window.location.href = 'myapp://' + path.substring(1);
+      timeout = setTimeout(function() {
+        // If we're still here after timeout, app is not installed
+        window.location.href = '/';
+      }, 500);
+    }
+    
+    // Handle case when app opens successfully
+    window.addEventListener('blur', function() {
+      clearTimeout(timeout);
+    });
+    
+    // Initiate app redirect
+    tryApp();
+  </script>
+</head>
+<body>
+  <h1>Redirecting to app...</h1>
+  <p>If you are not redirected, <a href="/">click here</a> to go back to the homepage.</p>
+</body>
+</html>
